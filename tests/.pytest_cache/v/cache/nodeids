@@ -1,0 +1,6 @@
+[
+  "reg_test.py::all_tests::test_email_provided", 
+  "reg_test.py::all_tests::test_form_exist", 
+  "reg_test.py::all_tests::test_password_provided", 
+  "reg_test.py::all_tests::test_user_name_exist"
+]
