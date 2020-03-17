@@ -7,6 +7,8 @@ users = []
 def index():
 	return 'Functioning'
 
+
+# The Add user endpoint
 @app.route('/api/add-user', methods =['POST'])
 def add_user():
 	user = {
@@ -15,17 +17,22 @@ def add_user():
 		'psw':request.json['psw']
 	}
 	users.append(user)
-	return jsonify({'msg':'User created'})
+	return jsonify({'User Created':users})
 
+# The Viewing user End point
 @app.route('/api/get-users', methods =['GET'])
 def getter():
 	return jsonify({'values': users})
 
+
+# The deleting End point.
 @app.route('/api/delete-user/<string:gone>', methods = ['DELETE'])
 def remover(gone):
-	leave = [x for x in users if x['name']== gone]
-	users.remove(leave)
-	return jsonify({'msg':'User deleted'})
+	for user in users:
+		if user['name'] == gone:
+			users.remove(user)
+
+	return jsonify({'User deleted':users})
 
 
 if __name__=='__main__':

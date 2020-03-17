@@ -1,0 +1,5 @@
+[
+  "test.py::All_test::test_add_guest", 
+  "test.py::All_test::test_user_deleted", 
+  "test.py::All_test::test_user_exist"
+]
